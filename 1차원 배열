@@ -24,3 +24,25 @@ int main()
     printf("%d %d",min,max);
     return 0;
 }
+==============================================================
+#2번 문제
+==============================================================
+#include <stdio.h>
+
+int main()
+{
+    int start,number,Case;
+    start=0;
+    for (int i=0; i<9;i++)
+    {
+        scanf("%d",&Case);
+        if (start<Case)
+        {
+            start=Case;
+            number=i;
+        }
+    }
+    printf("%d\n",start);
+    printf("%d",number+1);
+    return 0;
+}
