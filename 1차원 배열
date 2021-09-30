@@ -73,3 +73,34 @@ int main()
         printf("%d\n",numArr[i]);
     }
 }
+==============================================================
+#4번 문제
+==============================================================
+#include <stdio.h>
+
+int main()
+{
+    int number;
+    scanf("%d",&number);
+    float number_arr[number];
+    int start=0;
+
+    for (int i=0; i<number;i++)
+    {
+        scanf("%f",&number_arr[i]);
+        if (number_arr[i]>start)
+        {
+            start=number_arr[i];
+
+        }
+        
+    }
+    float sum=0;
+    for (int i=0; i<number;i++)
+    {
+        number_arr[i]=number_arr[i]*100/start;
+        sum+=number_arr[i];
+    }
+   
+    printf("%f", sum/number);
+}
