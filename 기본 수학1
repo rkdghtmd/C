@@ -26,7 +26,7 @@ int main()
     }
 }
 =======================================================
-#2
+#2번 문제
 =======================================================
 #include <stdio.h>
 
@@ -44,4 +44,29 @@ int main()
     }
     printf("%d",start);
     return 0;
+}
+=======================================================
+#3
+=======================================================
+#include <stdio.h>
+
+int main()
+{
+    int number;
+    scanf("%d",&number);
+    int start=1;
+    while ((start*start+start)/2<number)
+    {
+        start++;
+    }
+    int order=(number-(start*start-start)/2);
+    start++;
+    if (start%2!=0)
+    {
+        printf("%d/%d",order,start-order);
+    }
+    else
+    {
+        printf("%d/%d",start-order,order);
+    }
 }
