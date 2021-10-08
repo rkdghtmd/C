@@ -1,0 +1,27 @@
+=======================================================
+#1번 문제
+=======================================================
+#include <stdio.h>
+
+int main()
+{
+    int first,second,third;
+    int answer=0;
+    scanf("%d",&first);
+    scanf("%d",&second);
+    scanf("%d",&third);
+    int money=third-second;
+    if (money>0)
+    {
+        if (first%money==0)
+        {
+            answer++;
+        }
+        answer+=(first/money);
+        printf("%d",answer);
+    }
+    else
+    {
+        printf("-1");
+    }
+}
