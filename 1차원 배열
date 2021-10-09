@@ -104,3 +104,39 @@ int main()
    
     printf("%f", sum/number);
 }
+==============================================================
+#7번 문제
+==============================================================
+#include <stdio.h>
+
+int main()
+{
+    int number;
+    int N;
+    scanf("%d",&number);
+    for (int i=0; i <number; i++)
+    {
+        scanf("%d",&N);
+        int num_arr[N];
+        for (int l = 0 ; l < N ; l++)
+        {
+            scanf("%d",&num_arr[l]);
+        }
+        int sum=0;
+        for (int l = 0 ; l < N ; l++)
+        {
+            sum+=num_arr[l];
+        }
+        double average=sum/N;
+        float start=0;
+        for (int l = 0 ; l < N ; l++)
+        {
+            if (num_arr[l]>average)
+            {
+                start++;
+            }
+        }
+        start*=100;
+        printf("%.3f%%\n",start/N);
+    }
+}
