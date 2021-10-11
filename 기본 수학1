@@ -70,3 +70,71 @@ int main()
         printf("%d/%d",start-order,order);
     }
 }
+=======================================================
+#4번 문제
+=======================================================
+#include <stdio.h>
+
+int main()
+{
+    int morning;
+    int sleep;
+    int goal;
+    scanf("%d",&morning);
+    scanf("%d",&sleep);
+    scanf("%d",&goal);
+    if (morning >= goal)
+    {
+        printf("%d",1);
+    }
+    else
+    {
+        goal-=morning;
+        int answer= goal/(morning-sleep);
+        if (goal%(morning-sleep) != 0)
+        {
+            answer++;
+        }
+        printf("%d",answer+1);
+    }
+}
+=======================================================
+#5번 문제
+=======================================================
+#include <stdio.h>
+int function()
+{
+    int height,room;
+    scanf("%d",&height);
+    scanf("%d",&room);
+    int num_arr[room];
+    for (int i = 0 ; i<room; i++)
+    {
+        num_arr[i]=i+1;
+    }
+    for (int k=0 ;k <height; k++)
+    {
+        for (int i = room-1; i >=0 ; i--)
+        {
+            int number=0;
+            for (int l = 0 ; l <=i ; l++)
+            {
+                number +=num_arr[l];
+            }
+            num_arr[i]=number;
+        }
+        
+    }
+    return num_arr[room-1];
+}
+
+int main()
+{
+    int number;
+    scanf("%d",&number);
+    for (int i = 0 ; i <number ; i++)
+    {
+        int answer=function();
+        printf("%d\n",answer);
+    }
+}
