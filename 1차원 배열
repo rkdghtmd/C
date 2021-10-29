@@ -105,6 +105,36 @@ int main()
     printf("%f", sum/number);
 }
 ==============================================================
+#6
+==============================================================
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    for (int i = 0 ; i < a ; i ++)
+    {
+        int num=0;
+        char string[100];
+        scanf("%s", &string);
+        int answer=0;
+        for (int i = 0 ; string[i] != '\0'; i++)
+        {
+            if (string[i]=='O')
+            {
+                answer++;
+            }
+            if (string[i]=='X')
+            {
+                answer=0;
+            }
+            num+=answer;
+ 
+        }
+        printf("%d\n",num);
+    }
+}
+==============================================================
 #7번 문제
 ==============================================================
 #include <stdio.h>
