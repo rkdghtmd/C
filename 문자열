@@ -76,8 +76,6 @@ int main()
             string[i]-=32;
         }
     }
-
-    //======================== 문자를 전부 대문자로 교체
     int num_max=0;
     int answer_case;
     for (int i = 'A' ;i<='Z'; i++)
