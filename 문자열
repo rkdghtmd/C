@@ -121,3 +121,35 @@ int main()
     }
 
 }
+======================================================
+#7
+======================================================
+#include <stdio.h>
+int function(int num)
+{
+    int l=100;
+    int i = 10;
+    int answer=0;
+    while (l!=0)
+    {
+        answer+=(num%i)*l;
+        l/=10;
+        num/=10;
+    }
+    return answer;
+}
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    a=function(a);
+    b=function(b);
+    if (a>b)
+    {
+        printf("%d",a);
+    }
+    else
+    {
+        printf("%d",b);
+    }
+}
